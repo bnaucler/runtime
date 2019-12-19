@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Movie runtime</title>
+	<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+    <div class="spacer"></div>
+
+    <form id="loginform" onsubmit="searchmov(this); return false;" method="get">
+        <input type="text" name="search" class="search" placeholder="Movie name"><br>
+        <input type="submit" value="Get runtime">
+    </form>
+
+    <div id="container"></div>
+    <div class="spacer"></div>
+
+</body>
+<script type="text/javascript" src="js/runtime.js"></script>
+</html>
