@@ -1,14 +1,12 @@
-var api_addr = "https://api.themoviedb.org/3/";
-var api_key = "1beccc996fd1da809239854fc6a859ed";
-var backdrop_addr = "https://image.tmdb.org/t/p/original";
-var imdb_addr = "https://www.imdb.com/title/";
+const api_addr = "https://api.themoviedb.org/3/";
+const api_key = "1beccc996fd1da809239854fc6a859ed";
+const backdrop_addr = "https://image.tmdb.org/t/p/original";
+const imdb_addr = "https://www.imdb.com/title/";
 
 function mkxhr(url, rfunc) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            rfunc(xhr);
-        }
+        if(xhr.readyState == 4 && xhr.status == 200) rfunc(xhr);
     };
     xhr.open('GET', url, true);
     xhr.send();
